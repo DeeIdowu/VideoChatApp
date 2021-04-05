@@ -8,4 +8,6 @@ const io = require('socket.io')(server, {
         origin: '*',
         methods: ['GET', 'POST']
     }
-})
+});
+
+app.use(cors());
