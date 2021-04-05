@@ -18,4 +18,18 @@ app.get('/', (req, res) =>{
     res.send('Server is running.');
 })
 
+//for socket.io:
+io.on('connection', (socket) =>{
+    socket.emit('me', socket.id);
+
+    socket.on('disconnect', () => {
+        socket.broadcast.emit('callended');
+    });
+
+    socket.on('calluser', (data) =>{
+        
+    })
+
+})
+
 server.listen(PORT, ()=> console.log(`Server listening on port ${PORT}`));
