@@ -24,7 +24,7 @@ via functions/hooks + effects:
     const connectionRef = useRef();
 
     useEffect(()=> {
-        navigator.MediaDevices.getUserMedia({video: true, audio: true})
+        navigator.mediaDevices.getUserMedia({video: true, audio: true})
             .then((currentStream) => {
                 setStream(currentStream);
 
