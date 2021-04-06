@@ -57,6 +57,7 @@ via functions/hooks + effects:
     }
 
     const callUser = () => {
+       const peer = new Peer({initiator: false, trickle: false, stream});
 
     }
 
