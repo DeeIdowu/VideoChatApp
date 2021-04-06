@@ -11,7 +11,6 @@ function App() {
       <AppBar>
         <Typography variant="h2" align="center"> Video Chat App</Typography>
       </AppBar>
-      {/* Components required for application: */}
       <VideoPlayer/>
       <Options>
         <Notifications/>
