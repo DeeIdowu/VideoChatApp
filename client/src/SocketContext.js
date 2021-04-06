@@ -22,7 +22,9 @@ via functions/hooks + effects:
                 setStream(currentStream);
 
                 myVideo.current.srcObject = currentStream;
-            })
+            });
+
+            socket.on('me')
     })
 
     const answerCall = () => {
