@@ -7,9 +7,14 @@ const SocketContet = createContext();
 const socket = io("http://localhost:5000");
 
 const ContextProvider = ({children}) => {
+{/*setting up commands and configuration for the 
+communication of 
+socket.io from client to server 
+via functions/hooks + effects: 
+*/}
 
     useEffect(()=> {
-        
+
     })
 
     const answerCall = () => {
