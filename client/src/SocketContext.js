@@ -37,7 +37,9 @@ via functions/hooks + effects:
     }, []);
 
     const answerCall = () => {
+        setCallAccepted(true);
 
+        const peer = new Peer({initiator: false});
 
     }
 
