@@ -13,8 +13,9 @@ function App() {
       </AppBar>
       {/* Components required for application: */}
       <VideoPlayer/>
-      <Notifications/>
-      <Options/>
+      <Options>
+        <Notifications/>
+      </Options>
     </div>
   );
 }
