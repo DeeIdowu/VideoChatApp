@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useContext} from 'react'
 import {Button, TextField, Grid, Typography, Container, Paper} from '@material-ui/core';
 import {makeStyles} from '@material-ui/core/styles';
 import {CopyToClipboard} from 'react-copy-to-clipboard';
@@ -38,6 +38,7 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const Options = ({children}) => {
+    const context = useContext(SocketContext);
     return (
         <div>
            Options
