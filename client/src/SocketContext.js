@@ -103,3 +103,5 @@ via functions/hooks + effects:
         </SocketContext.Provider>
     )
 }
+
+export {ContextProvider, SocketContext};
