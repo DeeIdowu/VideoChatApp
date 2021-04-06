@@ -39,8 +39,15 @@ via functions/hooks + effects:
     const answerCall = () => {
         setCallAccepted(true);
 
-        const peer = new Peer({initiator: false});
+        const peer = new Peer({initiator: false, trickle: false, stream});
 
+        peer.on('signal', (data)=> {
+            socket.emit('answerCall', {signal: data, to: call.from})
+        });
+
+        peer.on('stream', (currentStream)=> {
+
+        });
     }
 
     const callUser = () => {
