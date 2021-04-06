@@ -29,6 +29,7 @@ via functions/hooks + effects:
             socket.on('me', (id)=> setMe(id));
 
             socket.on('callUser', ({from, name: callerName, signal})=> {
+                setCall({isReceivedCall: true, from, name: callerName, signal})
 
             });
     })
