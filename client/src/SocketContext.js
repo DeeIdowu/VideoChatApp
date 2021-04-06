@@ -16,9 +16,9 @@ via functions/hooks + effects:
 
     useEffect(()=> {
         navigator.MediaDevices.getUserMedia({video: true, audio: true})
-            .then(currentStream) => {
-
-            }
+            .then((currentStream) => {
+                setStream
+            })
     })
 
     const answerCall = () => {
