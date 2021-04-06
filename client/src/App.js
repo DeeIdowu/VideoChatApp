@@ -34,9 +34,11 @@ const useStyles = makeStyles((theme)=>({
 }));
 
 function App() {
+  const classes = useStyles();
+
   return (
-    <div>
-      <AppBar position="static" color="blue">
+    <div className={classes.wrapper}>
+      <AppBar className={classes.appBar} position="static" color="blue">
         <Typography variant="h2" align="center"> Video Chat App</Typography>
       </AppBar>
       <VideoPlayer/>
