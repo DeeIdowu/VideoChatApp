@@ -32,7 +32,8 @@ const VideoPlayer = () => {
     return (
         <Grid containter className={classes.gridContainer}>
         {/* Our own video*/}
-        <Paper className={classes.paper}>
+        {stream && (
+             <Paper className={classes.paper}>
             <Grid item xs={12} md={6}>
                 <Typography variant="h5" gutterBottom>
                     {name || 'Name'}
@@ -40,8 +41,11 @@ const VideoPlayer = () => {
                 <video playsInLine muted ref={myVideo} autoPlay className={classes.video}/>
             </Grid>
         </Paper>
+        )}
+       
         {/* User's video*/}
-         <Paper className={classes.paper}>
+        {callAccepted && !callEnded && (
+            <Paper className={classes.paper}>
             <Grid item xs={12} md={6}>
                 <Typography variant="h5" gutterBottom>
                    {call.name || 'Name'}
@@ -49,6 +53,7 @@ const VideoPlayer = () => {
                 <video playsInLine ref={userVideo} autoPlay className={classes.video}/>
             </Grid>
         </Paper>
+        )} 
         </Grid>
     )
 }
