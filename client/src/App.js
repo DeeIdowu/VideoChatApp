@@ -1,5 +1,8 @@
 import React from 'react';
 import {Typography, AppBar} from '@material-ui/core';
+import VideoPlayer from './components/VideoPlayer';
+import Notifications from './components/Notifications';
+import Options from './components/Options';
 import './App.css';
 
 function App() {
@@ -9,8 +12,9 @@ function App() {
         <Typography variant="h2" align="center"> Video Chat App</Typography>
       </AppBar>
       {/* Components required for application: */}
-      {/* VideoPlayer */}
-      {/* Options -> Notifications */}
+      <VideoPlayer/>
+      <Notifications/>
+      <Options/>
     </div>
   );
 }
