@@ -26,10 +26,13 @@ const useStyles = makeStyles((theme) => ({
 
 
 const VideoPlayer = () => {
+    const classes = useStyles();
+
     return (
-        <div>
-            VideoPlayer
-        </div>
+        <Grid containter className={classes.gridContainer}>
+        {/* Our own video*/}
+        {/* User's video*/}
+        </Grid>
     )
 }
 
