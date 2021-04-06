@@ -31,6 +31,14 @@ const VideoPlayer = () => {
     return (
         <Grid containter className={classes.gridContainer}>
         {/* Our own video*/}
+        <Paper className={classes.paper}>
+            <Grid item xs={12} md={6}>
+                <Typography variant="h5" gutterBottom>
+                Name:
+                </Typography>
+                <video playsInLine muted ref={'myVideo'} autoPlay className={classes.video}/>
+            </Grid>
+        </Paper>
         {/* User's video*/}
         </Grid>
     )
