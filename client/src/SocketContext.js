@@ -17,7 +17,7 @@ via functions/hooks + effects:
     useEffect(()=> {
         navigator.MediaDevices.getUserMedia({video: true, audio: true})
             .then((currentStream) => {
-                setStream
+                setStream(currentStream);
             })
     })
 
