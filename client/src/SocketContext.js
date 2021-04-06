@@ -12,11 +12,12 @@ communication of
 socket.io from client to server 
 via functions/hooks + effects: 
 */}
+    const [stream, setStream] = useState(null);
 
     useEffect(()=> {
         navigator.MediaDevices.getUserMedia({video: true, audio: true})
             .then(currentStream) => {
-                
+
             }
     })
 
