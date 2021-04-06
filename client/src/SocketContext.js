@@ -14,10 +14,14 @@ via functions/hooks + effects:
 */}
     const [stream, setStream] = useState(null);
 
+    const myVideo = useRef();
+
     useEffect(()=> {
         navigator.MediaDevices.getUserMedia({video: true, audio: true})
             .then((currentStream) => {
                 setStream(currentStream);
+
+                myVideo.current.srcObject = currentStream;
             })
     })
 
