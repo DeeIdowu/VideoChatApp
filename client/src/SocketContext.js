@@ -17,6 +17,7 @@ via functions/hooks + effects:
     const [call, setCall] = useState({});
     const [callAccepted, setCallAccepted] = useState(false); 
     const [callEnded, setCallEnded] = useState(false); 
+    const [name, setName] = useState(''); 
 
     const myVideo = useRef();
     const userVideo = useRef();
@@ -56,8 +57,17 @@ via functions/hooks + effects:
         connectionRef.current = peer;
     }
 
-    const callUser = () => {
+    const callUser = (id) => {
        const peer = new Peer({initiator: false, trickle: false, stream});
+
+       peer.on('signal', (data)=> {
+            socket.emit('callUser', { userToCall: id, signalData: data, from: me, name})
+        });
+
+        peer.on('stream', (currentStream)=> {
+            userVideo.current.srcObject = currentStream;
+        });
+
 
     }
 
