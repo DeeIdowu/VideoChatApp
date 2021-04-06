@@ -9,7 +9,7 @@ import './App.css';
 function App() {
   return (
     <div>
-      <AppBar>
+      <AppBar position="static" color="blue">
         <Typography variant="h2" align="center"> Video Chat App</Typography>
       </AppBar>
       <VideoPlayer/>
