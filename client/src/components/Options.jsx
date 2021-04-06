@@ -1,9 +1,11 @@
 import React from 'react'
 
-export const Options = () => {
+const Options = ({children}) => {
     return (
         <div>
             
         </div>
     )
 }
+
+export default Options;
