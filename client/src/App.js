@@ -7,9 +7,9 @@ import Notifications from './components/Notifications';
 import Options from './components/Options';
 import './App.css';
 
-const useStyles = makeStyles((theme)=>{
+const useStyles = makeStyles((theme)=>({
 
-});
+}));
 
 function App() {
   return (
