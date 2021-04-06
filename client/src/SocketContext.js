@@ -14,6 +14,7 @@ via functions/hooks + effects:
 */}
     const [stream, setStream] = useState(null);
     const [me, setMe] = useState('');
+    const [call, setCall] = useState({});
 
     const myVideo = useRef();
 
