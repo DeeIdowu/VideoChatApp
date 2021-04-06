@@ -15,6 +15,8 @@ via functions/hooks + effects:
     const [stream, setStream] = useState(null);
     const [me, setMe] = useState('');
     const [call, setCall] = useState({});
+    const [callAccepted, setCallAccepted] = useState(false); 
+    const [callEnded, setCallEnded] = useState(false); 
 
     const myVideo = useRef();
 
@@ -32,9 +34,10 @@ via functions/hooks + effects:
                 setCall({isReceivedCall: true, from, name: callerName, signal})
 
             });
-    })
+    }, []);
 
     const answerCall = () => {
+
 
     }
 
