@@ -13,6 +13,7 @@ socket.io from client to server
 via functions/hooks + effects: 
 */}
     const [stream, setStream] = useState(null);
+    const [me, setMe] = useState(null);
 
     const myVideo = useRef();
 
@@ -24,7 +25,7 @@ via functions/hooks + effects:
                 myVideo.current.srcObject = currentStream;
             });
 
-            socket.on('me')
+            socket.on('me', (id)=> setMe(id))
     })
 
     const answerCall = () => {
