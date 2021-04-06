@@ -40,12 +40,15 @@ const useStyles = makeStyles((theme) => ({
 const Options = ({children}) => {
     const {me, callAccepted, name, setName, callEnded, leaveCall, callUser} = useContext(SocketContext);
     const [idToCall, setIdToCall] = useState('');
+    const classes = useStyles();
 
     return (
-        <div>
+        <Container className={classes.container}>
+            <Paper elevation={10} className={classes.paper}>
+            </Paper>
            Options
            {children}
-        </div>
+        </Container>
     )
 }
 
