@@ -5,3 +5,23 @@ import Peer from 'simple-peer';
 const SocketContet = createContext();
 
 const socket = io("http://localhost:5000");
+
+const ContextProvider = ({children}) => {
+
+    useEffect(()=> {
+        
+    })
+
+    const answerCall = () => {
+
+    }
+
+    const callUser = () => {
+
+    }
+
+    const leaveCall = () => {
+
+
+    }
+}
