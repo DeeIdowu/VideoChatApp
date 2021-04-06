@@ -20,6 +20,7 @@ via functions/hooks + effects:
 
     const myVideo = useRef();
     const userVideo = useRef();
+    const connectionRef = useRef();
 
     useEffect(()=> {
         navigator.MediaDevices.getUserMedia({video: true, audio: true})
@@ -49,6 +50,10 @@ via functions/hooks + effects:
         peer.on('stream', (currentStream)=> {
             userVideo.current.srcObject = currentStream;
         });
+
+        peer.signal(call.signal);
+
+        connectionRef.current = peer;
     }
 
     const callUser = () => {
