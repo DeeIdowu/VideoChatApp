@@ -45,6 +45,16 @@ const Options = ({children}) => {
     return (
         <Container className={classes.container}>
             <Paper elevation={10} className={classes.paper}>
+                <form className={classes.root} noValidate autocomplete="off">
+                    <Grid container className={classes.gridContainer}>
+                        <Grid item xs={12} md={6} className={classes.padding}>
+                            <Typography gutterBottom variant="h6">
+                                Account Info
+                            </Typography>
+                            <TextField label="Name" value={name} onChange={(e)=> setName(e.target.value)} />
+                        </Grid>
+                    </Grid>
+                </form>
             </Paper>
            Options
            {children}
