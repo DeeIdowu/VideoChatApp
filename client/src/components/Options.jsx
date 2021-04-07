@@ -51,7 +51,12 @@ const Options = ({children}) => {
                             <Typography gutterBottom variant="h6">
                                 Account Info
                             </Typography>
-                            <TextField label="Name" value={name} onChange={(e)=> setName(e.target.value)} />
+                            <TextField label="Name" value={name} onChange={(e)=> setName(e.target.value)} fullWidth />
+                            <CopyToClipboard text={me} className={classes.margin}>
+                                <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
+                                    Copy Your ID
+                                </Button>
+                            </CopyToClipboard>
                         </Grid>
                     </Grid>
                 </form>
