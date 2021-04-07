@@ -84,9 +84,8 @@ const Options = ({children}) => {
                         </Grid>
                     </Grid>
                 </form>
-            </Paper>
-           Options
-           {children}
+                 {children}
+            </Paper>     
         </Container>
     )
 }
