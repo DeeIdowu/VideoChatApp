@@ -60,14 +60,18 @@ const Options = ({children}) => {
                         </Grid>
                         <Grid item xs={12} md={6} className={classes.padding}>
                             <Typography gutterBottom variant="h6">
-                                Account Info
+                                Make A Call
                             </Typography>
-                            <TextField label="Name" value={name} onChange={(e)=> setName(e.target.value)} fullWidth />
-                            <CopyToClipboard text={me} className={classes.margin}>
-                                <Button variant="contained" color="primary" fullWidth startIcon={<Assignment fontSize="large" />}>
-                                    Copy Your ID
+                            <TextField label="Name" value={idToCall} onChange={(e)=> setIdToCall(e.target.value)} fullWidth />
+                            {callAccepted && !callEnded ? (
+                                <Button>
+                                    Hang Up
                                 </Button>
-                            </CopyToClipboard>
+                            ) : (
+                                <Button>
+                                    Call
+                                </Button>
+                            )}
                         </Grid>
                     </Grid>
                 </form>
