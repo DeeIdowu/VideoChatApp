@@ -64,11 +64,11 @@ const Options = ({children}) => {
                             </Typography>
                             <TextField label="Name" value={idToCall} onChange={(e)=> setIdToCall(e.target.value)} fullWidth />
                             {callAccepted && !callEnded ? (
-                                <Button>
+                                <Button variant="contained" color="secondary" startIcon={<PhoneDisabled fontSize="large" />} fullWidth onClick={leaveCall} className={classes.margin}>
                                     Hang Up
                                 </Button>
                             ) : (
-                                <Button>
+                                <Button variant="contained" color="primary" startIcon={<Phone fontSize="large" />} fullWidth onClick={() => callUser(idToCall)} className={classes.margin}>
                                     Call
                                 </Button>
                             )}
